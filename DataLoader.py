@@ -25,7 +25,7 @@ class DataLoader():
 
     def _load_csv(self):
         data = pd.read_csv(self.data_path)
-        self.x = np.asarray(data.iloc[:, 1:])/255.0
+        self.x = np.asarray(data.iloc[:, 1:])
         self.y = np.asarray(data.iloc[:, 0])
         # one_hot
         new_y = np.zeros([self.y.shape[0], 10])
